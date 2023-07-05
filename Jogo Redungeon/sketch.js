@@ -6,18 +6,20 @@ var bau, bauImg;
 var besta, bestaImg;
 var cama, camaImg;
 var backgroundImg;
+var gameState;
+var game;
 
 function preload(){
 backgroundImg = loadImage("assets/Frame1.png");
 camaImg = loadImage("assets/cama.png");
-cavaleiroImg = loadImage("assets/atras.png");
-cavaleiroImg = loadImage("assets/frente.png");
-cavaleiroImg = loadImage("assets/direita.png");
-cavaleiroImg = loadImage("assets/esquerda.png");
+cavaleiro1Img = loadImage("assets/atras.png");
+cavaleiro2Img = loadImage("assets/frente.png");
+cavaleiro3Img = loadImage("assets/direita.png");
+cavaleiro4Img = loadImage("assets/esquerda.png");
 bauImg = loadImage("assets/baú.png");
 poteImg = loadImage("assets/pote.png");
-bestaImg = loadImage("asets/arco.png");
-pedraImg = loadImage("assets/pedra.png");
+bestaImg = loadImage("assets/arco.png");
+pedraImg = loadImage("assets/pedra (1).png");
 
 
 
@@ -37,17 +39,22 @@ game.start();
 function draw() {
 
     background(backgroundImage);
-    if (playerCount === 2) {
-        game.update(1);
-      }
-    
+
       if (gameState === 1) {
-        game.play();
+      
+        game.play()
       }
      
+      if (gameState === 2) {
+        game.end();
+      }
        
         
       }
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 
 
 
