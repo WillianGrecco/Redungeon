@@ -3,18 +3,18 @@ class Game {
         
     }
 
-    getState() {
-        var gameStateRef = database.ref('gameState');
-        gameStateRef.on("value"), function (data) {
-            gameState = data.val();
-        }
-    }
+    // getState() {
+    //     var gameStateRef = database.ref('gameState');
+    //     gameStateRef.on("value"), function (data) {
+    //         gameState = data.val();
+    //     }
+    // }
 
-    update(state) {
-            database.ref('/').update({
-                gameState : state
-            })
-    };
+    // update(state) {
+    //         database.ref('/').update({
+    //             gameState : state
+    //         })
+    // };
                
     
     start() {
@@ -32,22 +32,16 @@ class Game {
         cavaleiro3.addImage("cavaleiro3", esquerda.png);
         cavaleiro3.scale = 0.07;
 
-        cavaleiro4.addImage("cavaleiro2", direita.png);
+        cavaleiro4.addImage("cavaleiro4", direita.png);
         cavaleiro4.scale = 0.07;
+
+   
     }
+    
+    play() {
 
 
-
-
-    play(){
         
     }
-     
-
-
 
 }
-
-    
-
-
