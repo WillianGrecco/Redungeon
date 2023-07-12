@@ -5,7 +5,7 @@ var pedra, pedraImg;
 var bau, bauImg;
 var besta, bestaImg;
 var cama, camaImg;
-var backgroundImg,backgroundIMG;
+var Fundo, FundoImg;
 var gameState;
 var game, form;
 var cavaleiro;
@@ -13,7 +13,7 @@ var cavaleiro;
 var gameState = "start";
 
 function preload(){
-backgroundImg = loadImage("assets/Frame1.png");
+FundoImg = loadImage("assets/Frame1.png");
 camaImg = loadImage("assets/cama.png");
 cavaleiro1Img = loadImage("assets/atras.png");
 cavaleiro2Img = loadImage("assets/frente.png");
@@ -29,21 +29,20 @@ pedraImg = loadImage("assets/pedra(1).png");
 }
 
 function setup(){
-canvas = createCanvas(1400, 1400);
+canvas = createCanvas(600, 1400);
 // database = firebase.database();
-
-// form = new forms();
+                                                          
+// form = new forms(); 
 
 // game = new Game();
 // game.getState();
 // game.start();
-backgroundIMG = createSprite(700,700);
-backgroundIMG.addImage("backgroundimg", backgroundImg);
-backgroundIMG.velocityY= -1;
+Fundo = createSprite(700,700);
+Fundo.addImage("Fundo", FundoImg);
+Fundo.velocityY= 1;
 
 cavaleiro = createSprite (10,10);
 cavaleiro.addImage("cavaleiro",cavaleiro1Img)
-
 pedra = createSprite (40,40);
 pedra.addImage("pedra", pedraImg )
 
@@ -70,7 +69,7 @@ pote.addImage("pote", poteImg);
 
 function draw() {
 
-  background(255);
+  background(FundoImg);
 
 if (gameState === "play") {
         
@@ -102,9 +101,9 @@ cavaleiro.y = cavaleiro.y -1;
         
       // }
 
-// function windowResized() {
-//   resizeCanvas(windowWidth, windowHeight);
-// }
+//function windowResized() {
+//resizeCanvas(windowWidth, windowHeight);
+//}
 
 
 
