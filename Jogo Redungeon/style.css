@@ -1,5 +1,5 @@
+  
 
-/* isso é meio que padrao para todos */
 
 html, body {
     margin: 0;
@@ -17,7 +17,7 @@ html, body {
   }
   
 
-  /* isso vai depender do que fizermos */
+  
 
   
   .gameTitle{
@@ -37,8 +37,8 @@ html, body {
     text-align: center;
   }
   
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  ::placeholder {  
     color: white;
-    opacity: 0.5; /* Firefox */
+    opacity: 0.5;  
   }
-  
+   
